@@ -1,0 +1,182 @@
+// Top navigation bar - visible for medium and large screens
+.topnav {
+  background-color: $primary-color;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: $menu-height;
+  display: flex;
+  z-index: 3;
+  justify-content: space-evenly;
+  vertical-align: middle;
+
+  .top-springi-logo {
+    background: url("../img/springi_logo.png");
+    border-radius: 0%;
+    width: 100px;
+    height: auto;
+    background-size: 100px;
+    @include easeOut;
+    /*    width: 100px;
+    height: auto;
+    justify-content: left;*/
+  }
+
+  .top-nav-item {
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    @include easeOut;
+    &:hover {
+      background-color: $primary-color;
+      font-size: 1.5rem;
+      color: $secondary-color;
+      @include easeOut;
+    }
+
+    .top-menu-item {
+      &.current > a {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+// Menu button
+.menu-btn {
+  // display: none;
+  position: absolute;
+  z-index: 3;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  @include easeOut;
+  display: none;
+
+  .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: set-text-color($primary-color);
+    @include easeOut;
+  }
+
+  // Rotate into X With Menu Lines
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      // Line 1 - Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
+
+// Menu Overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0, 9;
+  visibility: hidden;
+  z-index: 1;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-nav,
+  &-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    float: left;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Navigation side
+  &-nav {
+    height: 75vh;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(100%, 0, 0);
+    @include easeOut;
+  }
+
+  // Branding side
+  &-branding {
+    height: 25vh;
+    background: $primary-color;
+    @include easeOut;
+    transform: translate3d(-100%, 0, 0);
+
+    .springi-logo {
+      background: url("../img/springi_logo.png");
+      border-radius: 0%;
+      width: 200px;
+      height: 100px;
+      background-size: 200px 100px;
+    }
+  }
+
+  // Nav-item specifics
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from right
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: darken($secondary-color, 30);
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: set-text-color($primary-color);
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: set-text-color($secondary-color);
+    }
+  }
+}
+
+// Delay each nav-itme slide by 0.1s
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}
