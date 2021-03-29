@@ -19,10 +19,12 @@ $background-opacity: 0.5;
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
+      background-repeat: no-repeat;
 
       &:after {
         content: "";
-        position: absolute;
+        position: fixed;
+        background-attachment: fixed;
         top: 0;
         right: 0;
         width: 100%;
@@ -31,7 +33,7 @@ $background-opacity: 0.5;
         //        background: rgba($primary-color, $background-opacity);
         background: radial-gradient(
           ellipse at 80% 50%,
-          transparent 30%,
+          transparent 10%,
           white 60%
         );
       }

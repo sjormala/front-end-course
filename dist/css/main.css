@@ -4724,16 +4724,18 @@ body {
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-repeat: no-repeat; }
     body#bg-img:after {
       content: "";
-      position: absolute;
+      position: fixed;
+      background-attachment: fixed;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: radial-gradient(ellipse at 80% 50%, transparent 30%, white 60%); }
+      background: radial-gradient(ellipse at 80% 50%, transparent 10%, white 60%); }
 
 h1,
 h2,
@@ -4763,7 +4765,7 @@ header {
   color: #eee; }
 
 main {
-  padding: 4rem;
+  padding: 6rem;
   margin: 0;
   min-height: calc(100vh - 45px); }
   main .icons {
@@ -4777,45 +4779,88 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+  main#services {
+    overflow: hidden; }
+    main#services h1 {
+      margin-top: 10vh; }
 
-.about-info {
+.services-info {
   display: grid;
-  grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: #eee 3px solid; }
-  .about-info .bio {
-    grid-area: bio;
-    font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
-  .about-info .job {
-    background: white;
-    padding: 0.5rem;
-    border-bottom: #eee 5px solid; }
+  grid-gap: 30px 30px;
+  grid-template-areas: "service1 service2 service3";
+  grid-template-columns: repeat(3, 1fr);
+  height: min-content; }
+  .services-info .service {
+    background: #fff;
+    padding: 1rem;
+    border: #000 1px solid;
+    border-radius: 3%;
+    max-width: 400px;
+    text-align: left; }
+    .services-info .service .headline {
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 0.5rem; }
+    .services-info .service .more {
+      display: none; }
+    .services-info .service .readMoreBtn {
+      background-color: #fff;
+      max-width: 70px;
+      border-bottom: #000 1px solid;
+      cursor: pointer; }
+  .services-info .service-1 {
+    grid-area: service1; }
+  .services-info .service-2 {
+    grid-area: service2; }
+  .services-info .service-3 {
+    grid-area: service3; }
 
-.projects {
+.work-info {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
-    height: 150px;
-    border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #eee;
-      transition: all 0.5s ease-out; }
+  grid-gap: 30px 30px;
+  grid-template-areas: "approach1 approach2" "approach3 approach4";
+  grid-template-columns: repeat(2, 1fr); }
+  .work-info .approach {
+    border: 3px #000 solid;
+    position: relative;
+    max-width: 500px;
+    min-height: 300px;
+    transition: all 0.5s ease-out;
+    background-color: white; }
+    .work-info .approach .headline {
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 1rem; }
+    .work-info .approach .description {
+      opacity: 0;
+      transition: 1s;
+      padding: 1rem; }
+    .work-info .approach:hover {
+      border-color: #eee 1px solid;
+      transition: all 0.5s ease-out;
+      background: white; }
+      .work-info .approach:hover .description {
+        opacity: 1; }
+  .work-info .approach-1 {
+    grid-area: approach1;
+    background: url("../img/springi_logo.png");
+    background-size: cover;
+    background-position: center; }
+  .work-info .approach-2 {
+    grid-area: approach2;
+    background: url("../img/springi_logo.png");
+    background-size: cover;
+    background-position: center; }
+  .work-info .approach-3 {
+    grid-area: approach3;
+    background: url("../img/springi_logo.png");
+    background-size: cover;
+    background-position: center; }
+  .work-info .approach-4 {
+    grid-area: approach4;
+    background: url("../img/springi_logo.png");
+    background-size: cover;
+    background-position: center; }
 
 .boxes {
   display: flex;
@@ -4854,7 +4899,8 @@ main {
   color: #333; }
 
 #main-footer {
-  position: fixed;
+  position: absolute;
+  z-index: 1;
   text-align: center;
   width: 100%;
   height: 45px;
@@ -4872,11 +4918,12 @@ main {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
-  .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+  .services-info {
+    grid-template-areas: "service1" "service2" "service3";
     grid-template-columns: 1fr; }
-  .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+  .work-info {
+    grid-template-areas: "approach1" "approach2" "approach3" "approach4";
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 640px) {
   main {
@@ -4894,5 +4941,9 @@ main {
     float: right;
     display: block;
     transition: all 0.5s ease-out; }
-  .projects {
+  .services-info {
+    grid-template-areas: "service1" "service2" "service3";
+    grid-template-columns: 1fr; }
+  .work-info {
+    grid-template-areas: "approach1" "approach2" "approach3" "approach4";
     grid-template-columns: 1fr; } }

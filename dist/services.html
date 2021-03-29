@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0d850fdf8f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>SPRINGI</title>
+</head>
+
+<body id="bg-img">
+
+    <header>
+        <div class="topnav" id="myTopnav">
+            <div class="top-springi-logo" id="springi-logo">
+            </div>
+            <div class="top-nav-item">
+                <a href="index.html" class="top-menu-item">Etusivu</a>
+            </div>
+            <div class="top-nav-item">
+                <a href="services.html" class="top-menu-item current">Palvelut</a>
+            </div> 
+            <div class="top-nav-item">
+                <a href="work.html" class="top-menu-item">Työtapamme</a>
+            </div>
+            <div class="top-nav-item">
+                <a href="contact.html" class="top-menu-item">Yhteystiedot</a>
+            </div>    
+            
+            <div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>       
+        </div>
+
+        <nav class="menu">
+            <div class="menu-branding">
+                <div class="springi-logo"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        Etusivu
+                    </a>
+                </li>
+                <li class="nav-item current">
+                    <a href="services.html" class="nav-link">
+                        Palvelut
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="work.html" class="nav-link">
+                        Työtapamme
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">
+                        Yhteystiedot
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <main id="services">
+        <h1 class="lg-heading">
+            Palvelut <span class="text-secondary">XXXXX</span>
+        </h1>
+        <h2 class="sm-heading">
+            Olemme mukana muutoksessasi...
+        </h2>
+        <div class="services-info">
+            <div class="service service1">
+                <div class="headline">Palvelu 1</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="dots" id="dots1">...</span><span class="more" id="more1">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                <div onclick="toggleService(1)" class="readMoreBtn" id="moreBtn1">Lue lisää</div>
+            </div>
+            <div class="service service2">
+                <div class="headline">Palvelu 2</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="dots" id="dots2">...</span><span class="more" id="more2">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                <div onclick="toggleService(2)" class="readMoreBtn" id="moreBtn2">Lue lisää</div>
+            </div>
+            <div class="service service3">
+                <div class="headline">Palvelu 3</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="dots" id="dots3">...</span><span class="more" id="more3">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+                <div onclick="toggleService(3)" class="readMoreBtn" id="moreBtn3">Lue lisää</div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="main-footer">
+        Springi Oy &copy; 2021
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

@@ -6,7 +6,6 @@ const menuNav = document.querySelector('.menu-nav');
 const menuBranding = document.querySelector('.menu-branding');
 const menuLogo = document.getElementById('springi-logo');
 
-
 const navItems = document.querySelectorAll('.nav-item');
 
 // Set Initial State of Menu
@@ -40,4 +39,24 @@ function toggleMenu() {
         showMenu = false;
  
     }
+}
+
+function toggleService(itemNum) {
+    var dots = document.getElementById("dots" + itemNum);
+    var moreText = document.getElementById("more" + itemNum);
+    var btnText = document.getElementById("moreBtn"+itemNum);
+
+    console.log("painettu: "+itemNum);
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Lue Lisää";
+        btnText.style.maxWidth = "70px";
+        moreText.style.display = "none";
+        } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Piilota";
+        btnText.style.maxWidth = "50px";
+        moreText.style.display = "inline";
+        }
 }

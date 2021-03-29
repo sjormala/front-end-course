@@ -18,18 +18,22 @@
     }
   }
 
-  .about-info {
+  .services-info {
     grid-template-areas:
-      "bioimage"
-      "bio"
-      "job1"
-      "job2"
-      "job3";
+      "service1"
+      "service2"
+      "service3";
 
     grid-template-columns: 1fr;
   }
-  .projects {
-    grid-template-columns: repeat(2, 1fr);
+
+  .work-info {
+    grid-template-areas:
+      "approach1"
+      "approach2"
+      "approach3"
+      "approach4";
+    grid-template-columns: 1fr;
   }
 }
 
@@ -63,7 +67,21 @@
     @include easeOut;
   }
 
-  .projects {
+  .services-info {
+    grid-template-areas:
+      "service1"
+      "service2"
+      "service3";
+
+    grid-template-columns: 1fr;
+  }
+
+  .work-info {
+    grid-template-areas:
+      "approach1"
+      "approach2"
+      "approach3"
+      "approach4";
     grid-template-columns: 1fr;
   }
 }
