@@ -15,6 +15,7 @@ body {
   margin: 0;
   font-family: Palatino, Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  min-width: 550px;
 }
 
 // Headings
@@ -36,6 +37,10 @@ h3 {
   }
 }
 
+button {
+  overflow: visible;
+}
+
 a {
   color: set-text-color($primary-color);
   text-decoration: none;
@@ -48,7 +53,7 @@ header {
 }
 
 .text-secondary {
-  color: $secondary-color;
+  color: $focus-color;
 }
 
 main {
@@ -91,12 +96,12 @@ main {
 .services-info {
   display: grid;
   grid-gap: 30px 30px;
+  align-items: flex-start;
 
-  grid-template-areas:
-  //  "headline1 headline2 headline3"
-    "service1 service2 service3";
+  grid-template-areas: "service1 service2 service3";
   grid-template-columns: repeat(3, 1fr);
   height: min-content;
+  justify-items: center;
 
   .service {
     background: $primary-color;
@@ -146,6 +151,7 @@ main {
     "approach1 approach2"
     "approach3 approach4";
   grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
 
   .approach {
     border: 3px #000 solid;
@@ -180,34 +186,140 @@ main {
 
   .approach-1 {
     grid-area: approach1;
-    background: url("../img/springi_logo.png");
+    background: url("../img/approach_bg1.jpg");
     background-size: cover;
     background-position: center;
   }
 
   .approach-2 {
     grid-area: approach2;
-    background: url("../img/springi_logo.png");
+    background: url("../img/approach_bg2.jpg");
     background-size: cover;
     background-position: center;
   }
 
   .approach-3 {
     grid-area: approach3;
-    background: url("../img/springi_logo.png");
+    background: url("../img/approach_bg3.jpg");
     background-size: cover;
     background-position: center;
   }
 
   .approach-4 {
     grid-area: approach4;
-    background: url("../img/springi_logo.png");
+    background: url("../img/approach_bg4.jpg");
     background-size: cover;
     background-position: center;
   }
 }
 
 // Contact Page
+
+#contact_container {
+  border: solid 3px #474544;
+  background-color: $primary-color;
+  max-width: 768px;
+  margin: 60px auto;
+  position: relative;
+}
+
+#contact_heading {
+  text-align: center;
+}
+
+.underline {
+  border-bottom: solid 2px #474544;
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+.email {
+  float: right;
+  width: 45%;
+}
+
+input[type="text"],
+[type="email"],
+select,
+textarea {
+  background: none;
+  border: none;
+  border-bottom: solid 2px #474544;
+  color: #474544;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0em 0 1.875em 0;
+  padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  padding: 0 0 0.875rem 0;
+}
+
+input[type="submit"] {
+  border: $secondary-color;
+  padding: 1rem;
+  color: $focus-color;
+  font-size: 1rem;
+}
+
+.message {
+  float: none;
+}
+
+.name {
+  float: left;
+  width: 45%;
+}
+
+select {
+  background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png")
+    no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+textarea {
+  line-height: 150%;
+  height: 150px;
+  resize: none;
+  width: 100%;
+}
+
 .boxes {
   display: flex;
   flex-wrap: wrap;

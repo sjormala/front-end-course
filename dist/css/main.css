@@ -14,10 +14,7 @@
     width: 100px;
     height: auto;
     background-size: 100px;
-    transition: all 0.5s ease-out;
-    /*    width: 100px;
-    height: auto;
-    justify-content: left;*/ }
+    transition: all 0.5s ease-out; }
   .topnav .top-nav-item {
     padding-top: 0.5rem;
     padding-right: 1rem;
@@ -26,10 +23,10 @@
     .topnav .top-nav-item:hover {
       background-color: #fff;
       font-size: 1.5rem;
-      color: #eee;
+      color: #aaa;
       transition: all 0.5s ease-out; }
     .topnav .top-nav-item .top-menu-item.current > a {
-      background-color: #eee; }
+      background-color: #aaa; }
 
 .menu-btn {
   position: absolute;
@@ -101,7 +98,7 @@
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #a2a2a2; }
+      color: #ba2727; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -113,7 +110,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #222; }
+      color: #ba2727; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -4720,7 +4717,8 @@ body {
   height: calc(100vh - $footer-height);
   margin: 0;
   font-family: Palatino, Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  min-width: 550px; }
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
@@ -4752,6 +4750,9 @@ h3 {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem; }
 
+button {
+  overflow: visible; }
+
 a {
   color: #222;
   text-decoration: none; }
@@ -4762,7 +4763,7 @@ header {
   height: 3rem; }
 
 .text-secondary {
-  color: #eee; }
+  color: #ba2727; }
 
 main {
   padding: 6rem;
@@ -4773,7 +4774,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eee;
+        color: #aaa;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -4787,9 +4788,11 @@ main {
 .services-info {
   display: grid;
   grid-gap: 30px 30px;
+  align-items: flex-start;
   grid-template-areas: "service1 service2 service3";
   grid-template-columns: repeat(3, 1fr);
-  height: min-content; }
+  height: min-content;
+  justify-items: center; }
   .services-info .service {
     background: #fff;
     padding: 1rem;
@@ -4819,7 +4822,8 @@ main {
   display: grid;
   grid-gap: 30px 30px;
   grid-template-areas: "approach1 approach2" "approach3 approach4";
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center; }
   .work-info .approach {
     border: 3px #000 solid;
     position: relative;
@@ -4836,31 +4840,120 @@ main {
       transition: 1s;
       padding: 1rem; }
     .work-info .approach:hover {
-      border-color: #eee 1px solid;
+      border-color: #aaa 1px solid;
       transition: all 0.5s ease-out;
       background: white; }
       .work-info .approach:hover .description {
         opacity: 1; }
   .work-info .approach-1 {
     grid-area: approach1;
-    background: url("../img/springi_logo.png");
+    background: url("../img/approach_bg1.jpg");
     background-size: cover;
     background-position: center; }
   .work-info .approach-2 {
     grid-area: approach2;
-    background: url("../img/springi_logo.png");
+    background: url("../img/approach_bg2.jpg");
     background-size: cover;
     background-position: center; }
   .work-info .approach-3 {
     grid-area: approach3;
-    background: url("../img/springi_logo.png");
+    background: url("../img/approach_bg3.jpg");
     background-size: cover;
     background-position: center; }
   .work-info .approach-4 {
     grid-area: approach4;
-    background: url("../img/springi_logo.png");
+    background: url("../img/approach_bg4.jpg");
     background-size: cover;
     background-position: center; }
+
+#contact_container {
+  border: solid 3px #474544;
+  background-color: #fff;
+  max-width: 768px;
+  margin: 60px auto;
+  position: relative; }
+
+#contact_heading {
+  text-align: center; }
+
+.underline {
+  border-bottom: solid 2px #474544;
+  margin: -0.512em auto;
+  width: 80px; }
+
+form {
+  padding: 37.5px;
+  margin: 50px 0; }
+
+.email {
+  float: right;
+  width: 45%; }
+
+input[type="text"],
+[type="email"],
+select,
+textarea {
+  background: none;
+  border: none;
+  border-bottom: solid 2px #474544;
+  color: #474544;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0em 0 1.875em 0;
+  padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+input[type="text"]:focus,
+[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  padding: 0 0 0.875rem 0; }
+
+input[type="submit"] {
+  border: #aaa;
+  padding: 1rem;
+  color: #ba2727;
+  font-size: 1rem; }
+
+.message {
+  float: none; }
+
+.name {
+  float: left;
+  width: 45%; }
+
+select {
+  background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png") no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
+select::-ms-expand {
+  display: none; }
+
+.subject {
+  width: 100%; }
+
+.telephone {
+  width: 100%; }
+
+textarea {
+  line-height: 150%;
+  height: 150px;
+  resize: none;
+  width: 100%; }
 
 .boxes {
   display: flex;
@@ -4876,7 +4969,7 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #eee;
+      background: #aaa;
       color: #222; }
       .boxes div:hover span {
         color: #222; }
@@ -4887,7 +4980,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eee;
+    background: #aaa;
     color: #222; }
 
 .btn-dark {
@@ -4907,20 +5000,23 @@ main {
   background: #fff;
   color: #222; }
 
-@media screen and (min-width: 821px) {
+@media screen and (min-width: 901px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
 
-@media screen and (min-width: 641px) and (max-width: 820px) {
+@media screen and (min-width: 641px) and (max-width: 900px) {
   main {
     align-items: center;
     text-align: center; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+  main#home h1 {
+    margin-top: 10vh; }
   .services-info {
-    grid-template-areas: "service1" "service2" "service3";
-    grid-template-columns: 1fr; }
+    grid-template-areas: "service1 service2" "service3 .";
+    grid-template-columns: repeat(2, 1fr);
+    align-content: flex-start; }
   .work-info {
     grid-template-areas: "approach1" "approach2" "approach3" "approach4";
     grid-template-columns: 1fr; } }

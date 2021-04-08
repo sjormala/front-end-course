@@ -17,9 +17,6 @@
     height: auto;
     background-size: 100px;
     @include easeOut;
-    /*    width: 100px;
-    height: auto;
-    justify-content: left;*/
   }
 
   .top-nav-item {
@@ -153,7 +150,7 @@
     }
 
     &.current > a {
-      color: darken($secondary-color, 30);
+      color: $focus-color;
     }
   }
 
@@ -169,7 +166,7 @@
     @include easeOut;
 
     &:hover {
-      color: set-text-color($secondary-color);
+      color: $focus-color;
     }
   }
 }

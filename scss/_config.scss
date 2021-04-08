@@ -1,7 +1,8 @@
 $primary-color: #fff;
 //$primary-color: #fce2c4;
-$secondary-color: #eee;
+$secondary-color: #aaa;
 $dark-color: #222;
+$focus-color: rgb(186, 39, 39);
 $show-home-image: true;
 $menu-height: 3rem;
 $footer-height: 40px;
@@ -46,7 +47,7 @@ $background-opacity: 0.5;
   @if (lightness($color) > 40) {
     @return $dark-color;
   } @else {
-    @return $primary-color;
+    @return $focus-color;
   }
 }
 
@@ -58,13 +59,13 @@ $background-opacity: 0.5;
 }
 
 @mixin mediaMd {
-  @media screen and (min-width: 641px) and (max-width: 820px) {
+  @media screen and (min-width: 641px) and (max-width: 900px) {
     @content;
   }
 }
 
 @mixin mediaLg {
-  @media screen and (min-width: 821px) {
+  @media screen and (min-width: 901px) {
     @content;
   }
 }
