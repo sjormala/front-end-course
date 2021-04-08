@@ -2,7 +2,7 @@
 LUT Front-End Course 2021
 
 #Setting up the environment<br>
-The project uses sass to create css-files. Use "npm -i sass" to install required packages.
+The project uses sass to create css-files. Use "npm i sass" to install required packages.
 
 If you want to use icons, you must install fontawesome packages.
 
