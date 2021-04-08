@@ -5024,9 +5024,11 @@ textarea {
 @media screen and (max-width: 640px) {
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding: 3rem; }
     main .lg-heading {
       line-height: 1;
+      font-size: 3rem;
       margin-bottom: 1rem; }
   main#home h1 {
     margin-top: 10vh; }
