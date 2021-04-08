@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Springi Oy website",
   "main": "index.js",
+  "homepage": "https://sjormala.github.io/front-end-course",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
@@ -10,6 +11,7 @@
   "author": "Sami Jormalainen",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^3.1.0",
     "node-sass": "^5.0.0",
     "sass": "^1.32.8"
   }

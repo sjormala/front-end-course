@@ -4718,7 +4718,7 @@ body {
   margin: 0;
   font-family: Palatino, Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-  min-width: 550px; }
+  min-width: 500px; }
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
@@ -5011,7 +5011,7 @@ textarea {
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
-  main#home h1 {
+  #home h1 {
     margin-top: 10vh; }
   .services-info {
     grid-template-areas: "service1 service2" "service3 .";
@@ -5040,6 +5040,10 @@ textarea {
   .services-info {
     grid-template-areas: "service1" "service2" "service3";
     grid-template-columns: 1fr; }
+    .services-info .service {
+      max-width: 300px; }
   .work-info {
     grid-template-areas: "approach1" "approach2" "approach3" "approach4";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+    .work-info .approach {
+      max-width: 300px; } }

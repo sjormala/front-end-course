@@ -18,7 +18,7 @@
     }
   }
 
-  main#home h1 {
+  #home h1 {
     margin-top: 10vh;
   }
 
@@ -78,6 +78,10 @@
       "service3";
 
     grid-template-columns: 1fr;
+
+    .service {
+      max-width: 300px;
+    }
   }
 
   .work-info {
@@ -87,5 +91,9 @@
       "approach3"
       "approach4";
     grid-template-columns: 1fr;
+
+    .approach {
+      max-width: 300px;
+    }
   }
 }
